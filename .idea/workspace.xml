@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf872511-24ac-4d64-843a-d7920fadd5b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/History/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/History/History.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Today/Today.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Today/Today.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Today/Today.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Today/Today.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +43,8 @@
       <workItem from="1614062469450" duration="3169000" />
       <workItem from="1614147165896" duration="3264000" />
       <workItem from="1614150536369" duration="141000" />
-      <workItem from="1614233373057" duration="1426000" />
+      <workItem from="1614233373057" duration="2563000" />
+      <workItem from="1614580159462" duration="2403000" />
     </task>
     <servers />
   </component>
