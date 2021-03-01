@@ -39,6 +39,7 @@ class History extends Component {
 					ltc: ltc?.data?.LTC?.USD || ''
 				}
 				// Set the state of todayPrice to the content of the object f
+				localStorage.setItem('todayPrice', JSON.stringify(f));
 				this.setState({ todayPrice: f });
 			}));
 	}
@@ -55,6 +56,7 @@ class History extends Component {
 					ltc: ltc?.data?.LTC?.USD || ''
 				}
 				// Set the state of yesterdayPrice to the content of the object f
+				localStorage.setItem('yesterdayPrice', JSON.stringify(f));
 				this.setState({ yesterdayPrice: f });
 			}));
 	}
@@ -71,6 +73,7 @@ class History extends Component {
 					ltc: ltc?.data?.LTC?.USD || ''
 				}
 				// Set the state of twoDaysPrice to the content of the object f
+				localStorage.setItem('twoDaysPrice', JSON.stringify(f));
 				this.setState({ twoDaysPrice: f });
 			}));
 	}
@@ -87,6 +90,7 @@ class History extends Component {
 					ltc: ltc?.data?.LTC?.USD || ''
 				}
 				// Set the state of threeDaysPrice to the content of the object f
+				localStorage.setItem('threeDaysPrice', JSON.stringify(f));
 				this.setState({ threeDaysPrice: f });
 			}));
 	}
@@ -104,8 +108,18 @@ class History extends Component {
 				}
 				console.log(eth)
 				// Set the state of fourDaysPrice to the content of the object f
+				localStorage.setItem('fourDaysPrice', JSON.stringify(f));
 				this.setState({ fourDaysPrice: f });
 			}));
+	}
+	componentDidMount () {
+		if (!navigator.onLine) {
+			this.setState({ todayPrice: JSON.parse(localStorage.getItem('todayPrice')) });
+			this.setState({ yesterdayPrice: JSON.parse(localStorage.getItem('yesterdayPrice')) });
+			this.setState({ twoDaysPrice: JSON.parse(localStorage.getItem('twoDaysPrice')) });
+			this.setState({ threeDaysPrice: JSON.parse(localStorage.getItem('threeDaysPrice')) });
+			this.setState({ fourDaysPrice: JSON.parse(localStorage.getItem('fourDaysPrice')) });
+		}
 	}
 	componentWillMount () {
 		this.getTodayPrice();

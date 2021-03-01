@@ -24,6 +24,11 @@ class Today extends Component {
 			})
 	}
 	componentDidMount () {
+		if (!navigator.onLine) {
+			this.setState({ btcprice: localStorage.getItem('BTC') });
+			this.setState({ ethprice: localStorage.getItem('ETH') });
+			this.setState({ ltcprice: localStorage.getItem('LTC') });
+		}
 		setInterval(() => {
 			axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD')
 				.then(response => {
@@ -44,8 +49,13 @@ class Today extends Component {
 	componentWillMount () {
 		axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD').then(response => {
 			this.setState({ btcprice: response.data.BTC.USD });
+			localStorage.setItem('BTC', response.data.BTC.USD);
+
 			this.setState({ ethprice: response.data.ETH.USD });
+			localStorage.setItem('ETH', response.data.ETH.USD);
+
 			this.setState({ ltcprice: response.data.LTC.USD });
+			localStorage.setItem('LTC', response.data.LTC.USD);
 		})
 		// establish a connection to Pusher
 		this.pusher = new Pusher('a353fa11308ff9919c4c', {
